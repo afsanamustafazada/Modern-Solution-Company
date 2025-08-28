@@ -1,0 +1,234 @@
+$(document).ready(function () {
+  $(".search input").click(function () {
+    $(".search form").addClass("active");
+    $(".searchClose").addClass("active");
+    $(".searchMenuMobile").addClass("active");
+  });
+  $(".searchClose").click(function () {
+    $(".search form").removeClass("active");
+    $(this).removeClass("active");
+    $(".search form").val();
+  });
+  $("#get-url-btn").click(function () {
+    const url = window.location.href;
+    Copy();
+    $(this).addClass("active");
+  });
+  function Copy() {
+    var Url = document.getElementById("url");
+    Url.innerHTML = window.location.href;
+    console.log(Url.innerHTML);
+    Url.select();
+    document.execCommand("copy");
+  }
+  $(document).click(function (e) {
+    e.stopPropagation();
+    var container = $("#get-url-btn");
+    if (container.has(e.target).length === 0) {
+      $("#get-url-btn").removeClass("active");
+    }
+  });
+  $(".menuOpen").click(function () {
+    $(".headerLeft").addClass("active");
+  });
+  $(".menuCLose").click(function () {
+    $(".headerLeft").removeClass("active");
+    $(".searchMenuMobile").removeClass("active");
+    $(".search form").removeClass("active");
+    $(".search input").val();
+    console.log("red");
+  });
+  $(".searchMenuButton").click(function () {
+    $(".searchMenuMobile").addClass("active");
+    $(".search").addClass("active");
+  });
+
+
+
+});
+var swiper = new Swiper(".certificateSwiper", {
+  slidesPerView: 3.4,
+  spaceBetween: 8,
+  navigation: {
+    nextEl: ".certificateButton .swiper-button-next",
+    prevEl: ".certificateButton .swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.8,
+    },
+    768: {
+      slidesPerView: 2.6,
+    },
+    1024: {
+      slidesPerView: 3.4,
+    },
+  },
+});
+var swiper = new Swiper(".photoGallerySwiper", {
+  slidesPerView: 5,
+  spaceBetween: 8,
+  navigation: {
+    nextEl: ".photoGalleryButtons .swiper-button-next",
+    prevEl: ".photoGalleryButtons .swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.6,
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    1024: {
+      slidesPerView: 4.5,
+    },
+  },
+});
+var swiper = new Swiper(".solitionSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 8,
+  loop: true,
+  speed: 300,
+  navigation: {
+    nextEl: ".solutionButtons .swiper-button-next",
+    prevEl: ".solutionButtons .swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.8,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+var swiper = new Swiper(".productInnerSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 16,
+  loop: true,
+  speed: 300,
+//   centeredSlides: true,
+
+  navigation: {
+    nextEl: ".productInnerSwiper .swiper-button-next",
+    prevEl: ".productInnerSwiper .swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+var swiper = new Swiper(".wallpSwiper", {
+  loop: true,
+  speed: 1000,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+});
+var swiper = new Swiper(".productGallery", {
+  slidesPerView: 1,
+  spaceBetween: 2,
+  loop: true,
+  speed: 300,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+var swiper = new Swiper(".projectSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 8,
+  loop: true,
+  speed: 300,
+  navigation: {
+    nextEl: ".productButtons .swiper-button-next",
+    prevEl: ".productButtons .swiper-button-prev",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+var swiper = new Swiper(".productSwiper", {
+  slidesPerView: 4,
+  spaceBetween: 8,
+  loop: true,
+  speed: 300,
+  navigation: {
+    nextEl: ".productButtons .swiper-button-next",
+    prevEl: ".productButtons .swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+var swiper = new Swiper(".productCategorySwiper", {
+  slidesPerView: 6.2,
+  spaceBetween: 8,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.8,
+    },
+    768: {
+      slidesPerView: 3.8,
+    },
+    1024: {
+      slidesPerView: 6.2,
+    },
+  },
+});
+  Fancybox.bind("[data-fancybox]");
+
+
+// let input = document.getElementById("inputTag");
+// let imageName = document.getElementById("imageName");
+
+// input.addEventListener("change", () => {
+//   let inputImage = document.querySelector("input[type=file]").files[0];
+
+//   imageName.innerText = inputImage.name;
+// });
