@@ -116,7 +116,6 @@ h6,
     padding: 30px 0;
     color: var(--dark);
     font-weight: 500;
-    text-transform: uppercase;
     outline: none;
 }
 
@@ -246,7 +245,7 @@ h6,
     color: var(--primary);
     font-weight: 600;
     letter-spacing: 5px;
-    text-transform: uppercase;
+    
 }
 
 
