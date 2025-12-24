@@ -127,7 +127,7 @@ h6,
 
 /* Nav linklər */
 .navbar .navbar-nav .nav-link {
-    margin-right: 80px !important;
+    margin-right: 95px !important;
     padding: 10px 0 !important;       /* Əvvəl 30px idi */
     color: var(--dark);
     font-weight: 500;
@@ -619,4 +619,20 @@ p, a, li, span, button, input, textarea, strong, small {
 #stats {
   padding: 50px 0;
   background: #f9f9f9;
+}
+.catalog-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* Internet Explorer və Edge üçün */
+    scrollbar-width: none;  /* Firefox üçün */
+}
+
+.catalog-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari və Opera üçün */
+}
+
+/* Şəkillərin yan-yana düzgün qalması üçün */
+.catalog-item {
+    flex: 0 0 auto;
 }
