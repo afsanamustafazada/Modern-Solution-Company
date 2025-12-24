@@ -110,7 +110,7 @@ h6,
     display: flex;
     align-items: center;              /* Logo və menyunu ortalayır */
     justify-content: space-between;   /* Sağ-sol tərəfləri bərabərləşdirir */
-    padding: 8px 40px !important;     /* Ümumi hündürlüyü azaldır */
+    padding: 8px 4cqb !important;     /* Ümumi hündürlüyü azaldır */
     background-color: #fff;
     transition: all 0.3s ease-in-out;
     border-bottom: 1px solid #eee;
@@ -127,7 +127,7 @@ h6,
 
 /* Nav linklər */
 .navbar .navbar-nav .nav-link {
-    margin-right: 20px !important;
+    margin-right: 80px !important;
     padding: 10px 0 !important;       /* Əvvəl 30px idi */
     color: var(--dark);
     font-weight: 500;
